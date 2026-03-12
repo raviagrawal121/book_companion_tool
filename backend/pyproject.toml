@@ -1,0 +1,7 @@
+[project]
+name = "book-companion-tool"
+version = "0.1.0"
+description = "Rag Based Book Companion Tool"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = []
