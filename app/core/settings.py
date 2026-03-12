@@ -11,6 +11,7 @@ Usage:
 
 from pydantic_settings import BaseSettings, SettingsConfigDict
 from functools import lru_cache
+from pydantic import Field
 
 
 class Settings(BaseSettings):
@@ -22,7 +23,7 @@ class Settings(BaseSettings):
     )
 
     # ── OpenAI ────────────────────────────────────────────────────────────────
-    openai_api_key: str
+    openai_api_key: str = Field(..., alias="OPENAI_API_KEY")
 
     # ── Models ────────────────────────────────────────────────────────────────
     chat_model: str = "gpt-4o-mini"
